@@ -2,13 +2,10 @@ body {
 	background: #ddd;
 	font-family: Comic Sans MS, Comic Sans, cursive;
 	letter-spacing: 1px;
+	color: #004040;
 }
 
-h2 {
-	margin: 0px;
-}
-
-.container {
+.wrapper {
 	background: #fff;
 	margin-left: auto;
 	margin-right: auto;
@@ -16,6 +13,97 @@ h2 {
 	border-radius: 10px;
 
 	width: 80%;
-	max-width: 1170px;
+	max-width: 1900px;
 }
 
+h1 {
+	margin: 0px 0px 0px 0px;
+}
+
+.block__item {
+	margin: 15px 0px 0px 0px;
+
+	border-top: 1px solid #ddd;
+}
+
+.block__title {
+	margin: 15px 0px 10px 0px;
+
+	text-transform: uppercase;
+	font-weight: bold;
+	cursor: pointer;
+	position: relative;
+}
+
+.block__title:hover {
+	transition: all 0.5s ease;
+	color: #00a0a0;
+}
+
+.block__title:before,
+.block__title:after {
+	content: '';
+	width: 20px;
+	height: 3px;
+	background: #00a0a0;
+	position: absolute;
+	top: 10px;
+	right: 5px;
+}
+
+.block__title:before {
+	transform: rotate(90deg);
+}
+
+.block__text {
+	display: none;
+}
+
+.block__item.active .block__text {
+	display: block;
+}
+
+.block__item.active .block__title:before {animation: plus1 0.5s forwards ease-in-out;}
+@keyframes plus1 {
+  0% {transform: rotate(90deg);}
+  50% {transform: rotate(113deg);}
+  100% {transform: rotate(135deg);}
+}
+
+.block__item.active .block__title:after {animation: plus2 0.5s forwards ease-in-out;}
+@keyframes plus2 {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(23deg);}
+  100% {transform: rotate(45deg);}
+}
+
+ /* Анимация плюсика
+.plus_animate {
+  width: 25px;
+  height: 25px;
+  overflow: hidden;
+}
+
+.plus_animate:before {
+  content: "+";
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: 25px;
+  font-size: 40px;
+  text-align: center;
+  color: #004040;
+  font-family: serif;
+  font-weight: normal;
+}
+
+.plus_animate:hover:before {animation: plus 0.5s forwards ease-in-out;}
+@keyframes plus {
+  0% {transform: rotate(0deg);}
+  50% {transform: rotate(45deg);}
+  90% {font-family: serif; font-weight: normal;}
+  100% {transform: rotate(45deg); font-family: sans-serif; font-weight: bold;}
+}
+*/
